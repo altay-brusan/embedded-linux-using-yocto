@@ -1,0 +1,3 @@
+What if i have a Makefile which don't have clean target?
+-----------------------------------------------------------
+

@@ -1,0 +1,19 @@
+bblayers.conf
+------------------
+
+The bblayers.conf file tells BitBake what layers you want considered during the build.
+
+By default, the layers listed in this file include layers minimally needed by the build system
+
+However, you must manually add any custom layers you have created
+
+E.g: BBLAYERS = "\
+                                  /home/linuxtrainer/poky/meta \
+                                 /home/linuxtrainer/poky/meta-poky \
+                                 /home/linuxtrainer/poky/meta-yocto-bsp \
+                                 /home/linuxtrainer/poky/meta-mylayer \
+                                 "
+This example enables four layers, one of which is a custom user defined layer named "meta-mylayer"
+
+
+

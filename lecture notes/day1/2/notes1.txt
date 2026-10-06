@@ -1,0 +1,28 @@
+Advantages of Yocto Project
+----------------------------
+
+1. Widely Adopted Across the Industry
+	Semiconductor, operating system, software, and service vendors exist whose products and services adopt and support the Yocto Project.
+	Eg. Intel, Facebook, arm, Juniper Networks, LG, AMD, NXP, DELL
+
+2. Architecture Agnostic
+	supports Intel, ARM, MIPS, AMD, PPC and other architectures
+	chip vendors create and supply BSPs that support their hardware
+	if you have custom silicon, you can create a BSP that supports that architecture
+	the Yocto Project fully supports a wide range of device emulation through the Quick EMUlator (QEMU)
+
+3. Images and Code Transfer Easily
+	Yocto Project output can easily move between architectures without moving to new development environments.
+
+4. Flexibility
+	Through customization and layering, a project group can leverage the base Linux distribution to create a distribution that works for their product needs.
+
+5. Ideal for Constrained Embedded and IoT devices
+	Unlike a full Linux distribution, you can use the Yocto Project to create exactly what you need for embedded devices
+	You only add the feature support or packages that you absolutely need for the device
+
+6. Uses a Layer Model
+	The Yocto Project layer infrastructure groups related functionality into separate bundles.
+	You can incrementally add these grouped functionalities to your project as needed
+	Allows you to easily extend the system, make customizations, and keep functionality organized.
+	

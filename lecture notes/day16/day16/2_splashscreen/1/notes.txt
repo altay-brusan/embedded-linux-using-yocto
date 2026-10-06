@@ -1,0 +1,19 @@
+splash screen
+--------------
+
+We have enabled splash screen by
+
+IMAGE_FEATURES += "splash"
+
+We get a splash screen with yocto logo
+
+psplash
+---------
+
+By default, this screen is provided by psplash
+
+PSplash is a userspace graphical boot splash screen for mainly embedded Linux devices supporting a 16bpp or 32bpp framebuffer.
+
+Recipe: psplash found under "poky/meta-poky/recipes-core"
+
+It uses an encoded image psplash-poky-img.h which it compiles /usr/bin/psplash to binary

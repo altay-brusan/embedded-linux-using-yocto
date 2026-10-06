@@ -1,0 +1,32 @@
+Licensing
+----------------
+
+Your recipe needs to have both the LICENSE and LIC_FILES_CHKSUM variables:
+
+LICENSE:
+---------
+
+	This variable specifies the license for the software.
+
+	 If you do not know the license under which the software you are building is distributed, you should go to the source code and look for that information. 
+
+	Typical files containing this information include COPYING, LICENSE, and README files. 
+
+	You could also find the information near the top of a source file. 
+
+For example, given a piece of software licensed under the GNU General Public License version 2, you would set LICENSE as follows:
+
+LICENSE = "GPLv2"
+
+For standard licenses, use the names of the files in meta/files/common-licenses/
+
+LIC_FILES_CHKSUM:
+-----------------
+
+The OpenEmbedded build system uses this variable to make sure the license text has not changed.
+
+If it has, the build produces an error and it affords you the chance to figure it out and correct the problem.
+
+Example that assumes the software has a COPYING file:
+
+LIC_FILES_CHKSUM = "file://COPYING;md5=xxx"

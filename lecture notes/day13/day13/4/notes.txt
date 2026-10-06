@@ -1,0 +1,23 @@
+Sharing Files Between Recipes
+------------------------------
+
+Recipes often need to use files provided by other recipes on the build host.
+
+For example, an application linking to a common library needs access to the library itself and its associated headers
+
+The way this access is accomplished is through the sysroot.
+
+One sysroot exists per "machine": 
+
+	a sysroot exists for the target machine
+
+	a sysroot exists for the build host.
+
+Subset of files installed into standard locations during the do_install task within the ${D} directory automatically goes into the sysroot.
+
+do_prepare_recipe_sysroot
+--------------------------
+
+This task sets up the two sysroots in ${WORKDIR} (i.e. recipe-sysroot and recipe-sysroot-native) 
+
+

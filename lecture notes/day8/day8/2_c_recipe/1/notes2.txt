@@ -1,0 +1,8 @@
+install keyword
+-----------------
+
+install not only copies files but also changes its ownership and permissions and optionally removes debugging symbols from executables.
+
+It combines cp with chown, chmod and strip
+
+

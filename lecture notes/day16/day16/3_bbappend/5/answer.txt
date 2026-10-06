@@ -1,0 +1,6 @@
+How to validate whether my bbappend is successfully applied to recipe?
+----------------------------------------------------------------------
+
+$ bitbake-layers show-appends
+
+Lists .bbappend files and the recipe files to which they apply.

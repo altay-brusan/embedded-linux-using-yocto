@@ -1,0 +1,11 @@
+Booting in Raspberry Pi3
+---------------------------
+
+GPU Core
+first stage bootloader, which is stored in ROM on the SoC
+bootcode.bin
+start.elf
+config.txt
+cmdline.txt
+kernel7.img
+

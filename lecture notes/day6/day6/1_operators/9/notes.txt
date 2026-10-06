@@ -1,0 +1,17 @@
+Prepending Operators
+-------------------
+
+=+
+------
+
+A = "world"
+A =+ "hello"
+
+=.
+----------
+
+A = "world"
+A =. "hello"
+
+Same as previous, =+ adds an additional space
+

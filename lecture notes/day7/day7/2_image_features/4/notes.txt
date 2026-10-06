@@ -1,0 +1,12 @@
+debug-tweaks
+---------------
+
+In the default state, local.conf file has EXTRA_IMAGE_FEATURES set to "debug-tweaks"
+
+debug-tweaks features enable password-less login for the root user
+
+Advantage: makes logging in for debugging or inspection easy during development 
+
+Disadvantage: anyone can easily log in during production.
+
+So, you need to remove the 'debug-tweaks' feature from production image

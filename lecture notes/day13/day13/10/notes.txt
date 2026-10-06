@@ -1,0 +1,14 @@
+DOT Format
+----------------
+
+The DOT format is a text description language for graphics that is understood by the GraphViz open source package and all utilities that use it
+
+$ dot -Tpdf task-depends.dot -o outfile.pdf
+
+$ evince outfile.pdf
+
+The most useful way to display dependency data is to ask Bitbake to display it graphically with the dependency explorer, as follows:
+
+bitbake -g -u taskexp recipename
+
+This command displays a GUI window from which you can view build-time and runtime dependencies for the recipes involved in building recipename

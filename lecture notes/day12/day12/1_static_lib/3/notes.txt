@@ -1,0 +1,11 @@
+Write a Static Library Recipe
+--------------------------------
+
+Name of the Recipe: mystatic
+
+File Location:
+----------------
+
+.a 	->	${libdir}
+
+.h	-> 	${includedir}

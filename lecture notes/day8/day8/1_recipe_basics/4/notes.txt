@@ -1,0 +1,31 @@
+Stage 1: Fetching Code (do_fetch)
+----------------------------------
+
+The first thing your recipe must do is specify how to fetch the source files.
+
+Fetching is controlled mainly through the SRC_URI variable
+
+Your recipe must have a SRC_URI variable that points to where the source is located.
+
+The SRC_URI variable in your recipe must define each unique location for your source files.
+
+Bitbake supports fetching source code from git, svn, https, ftp, etc
+
+URI scheme syntax: scheme://url;param1;param2
+
+scheme can describe a local file using file:// or remote locations with https://, git://, svn://, hg://, ftp://
+
+By default, sources are fetched in $BUILDDIR/downloads
+
+Examples of SRC_URI
+----------------------
+
+busybox_1.31.0.bb  : SRC_URI = "https://busybox.net/downloads/busybox-${PV}.tar.bz2"
+
+linux-yocto_5.2.bb : SRC_URI = "git://git.yoctoproject.org/linux-yocto.git"
+
+weston-init.bb	   : SRC_URI = "file://init"
+
+The do_fetch task uses the prefix of each entry in the SRC_URI variable value to determine how to fetch the source code.
+
+Note: Any patch files present, needs to be specified in SRC_URI

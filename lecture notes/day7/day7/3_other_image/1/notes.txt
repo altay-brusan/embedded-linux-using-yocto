@@ -1,0 +1,10 @@
+IMAGE_LINGUAS
+--------------
+
+Specifies the list of locales to install into the image during the root filesystem construction process
+
+IMAGE_LINGUAS = "zh-cn"
+
+Inside qemu image
+$ locale -a
+

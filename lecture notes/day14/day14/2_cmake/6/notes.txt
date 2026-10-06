@@ -1,0 +1,12 @@
+CMAKE_INSTALL_PREFIX
+----------------------
+
+If “make install” is invoked or INSTALL is built, this directory is prepended onto all install directories.
+
+This variable defaults to /usr/local on UNIX
+
+To install your binaries in /usr/bin
+
+$ cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+$ make
+$ make install

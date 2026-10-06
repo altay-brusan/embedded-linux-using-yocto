@@ -1,0 +1,8 @@
+Override Style Operation Advantages
+----------------------------------
+
+An advantage of the override style operations "_append", "_prepend", and "_remove" as compared to the "+=" and "=+" operators is that the override style operators provide guaranteed operations
+
+IMAGE_INSTALL += "usbutils"
+
+IMAGE_INSTALL_append = " usbutils"

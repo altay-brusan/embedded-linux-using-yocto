@@ -1,0 +1,17 @@
+EXTRA_OECONF
+-------------
+
+The configure script may also give you the opportunity to enable or disable certain features
+
+You can find the options that is offered by running
+
+./configure --help
+
+./configure --enable-something
+
+Yocto support
+--------------
+EXTRA_OECONF is used to add extra options to the configure script.
+
+EXTRA_OECONF += "--enable-something" 
+

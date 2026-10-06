@@ -1,0 +1,36 @@
+Write a recipe for git remote repository
+----------------------------------------
+
+Yocto supports the ability to pull code from online git repositories as part of the build process.
+
+Step 1: Set SRC_URI
+
+SRC_URI = "git://<URL>;protocol=https"
+
+Step 2: Set S environmental variable
+
+S = ${WORKDIR}/git
+
+Step 3: Set SRCREV environmental variable 
+
+What is the use of SRCREV?
+--------------------------
+
+When fetching a repository, bitbake uses SRCREV variable to determine the specific revision from which to build
+
+There are two options to this variable:
+---------------------------------------
+
+1) AUTOREV:
+
+SRCREV = "${AUTOREV}"
+
+When SRCREV is set to the value of this variable, it specifies to use the latest source revision in the repository
+
+The build system accesses the network in an attempt to determine the latest version of software from the SCM
+
+2) A specific revision (SHA1 hash when fetching from git)
+
+If you want to build a fixed revision and you want to avoid performing a query on the remote repository every time BitBake parses your recipe
+
+SRCREV = "d6918c8832793b4205ed3bfede78c2f915c23385"

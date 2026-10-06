@@ -1,0 +1,21 @@
+Patches
+---------------
+
+Patches can be easily created using Git
+
+If you download the third-party source code as a Git repository, this is definitely the easiest solution
+
+After downloading the repository, make the required changes to the code, and add these changes to the repository as a new commit
+
+You can then tell Git to make a patch file.
+
+If all the changes are contained within a single additional commit, you can use the following command:
+
+~$ git show HEAD > my-patch.patch
+
+These generated patches should be bundled with your recipe files.
+
+Patches should always be in a sub-directory of where the recipe lives.
+
+Yocto will automatically apply these patches when it needs to build your recipe.
+

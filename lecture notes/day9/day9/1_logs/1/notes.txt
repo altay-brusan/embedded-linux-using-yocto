@@ -1,0 +1,11 @@
+Where do I find build logs?
+-----------------------------
+
+Every build produces lots of log output for diagnostics and error chasing
+
+Output of bitbake gets logged to tmp/log/cooker/<machine>/
+
+$  cat tmp/log/cooker/<machine>/<timestamp>.log  | grep 'NOTE:.*task.*Started'
+
+
+

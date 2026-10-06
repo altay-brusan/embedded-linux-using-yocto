@@ -1,0 +1,11 @@
+yocto-check-layer
+------------------
+
+The yocto-check-layer script provides you a way to assess how compatible your layer is with the Yocto Project
+
+You should use this script if you are planning to apply for Yocto Project Compatible Program
+
+$ source oe-init-build-env
+
+$ yocto-check-layer your_layer_directory
+ 

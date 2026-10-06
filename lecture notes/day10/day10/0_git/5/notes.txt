@@ -1,0 +1,9 @@
+How to pass a tag to a git recipe
+----------------------------------
+
+tag parameter of git fetcher
+------------------------------
+
+"tag": Specifies a tag to use for the checkout. To correctly resolve tags, BitBake must access the network
+
+SRCREV is not needed in this case

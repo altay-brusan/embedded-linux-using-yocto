@@ -1,0 +1,28 @@
+Dependencies
+---------------
+
+Most software packages have a short list of other packages that they require, which are called dependencies
+
+make menuconfig need ncurses library
+
+These dependencies fall into two main categories
+
+        build-time dependencies: required when the software is built
+
+        runtime dependencies: which are required to be installed on the target in order for the software to execute
+
+Examples
+----------
+
+Build Time Dependencies: 
+
+	Your software uses a particular library. For example pthread/openssl. 
+	Application cannot build without pthread/openssl library
+
+Run Time Dependencies:
+
+	If your software internally calls a particular command for example (lspci)
+
+	If your software uses run time loading of dynamic library (dlopen)
+
+	Application/Software can build, but need them during execution

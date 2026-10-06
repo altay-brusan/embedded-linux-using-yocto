@@ -1,0 +1,30 @@
+Autotools
+-----------
+
+Step1 : Configuration (./configure)
+
+	The configure script is responsible for getting ready to build the software on your specific system
+
+	It makes sure all of the dependencies for the rest of the build and install process are available
+
+	programs often written in C, usually need a C compiler to build them.
+
+	In these cases the configure script will establish that your system does indeed have a C compiler, and find out what it’s called and where to find it.
+
+Step2 : Build (make)
+
+	Once configure has done its job, we can invoke make to build the software.
+	
+	This runs a series of tasks defined in a Makefile to build the finished program from its source code.
+
+	Makefile comes with a template called Makefile.in and the configure script produces a customised Makefile specific to your system.
+	
+Step3 : Install (make install)
+
+	make install command will copy the built program, and its libraries and documentation, to the correct locations.
+
+	program’s binary will be copied to a directory on your PATH
+
+	program’s manual page will be copied to a directory on your MANPATH
+
+	

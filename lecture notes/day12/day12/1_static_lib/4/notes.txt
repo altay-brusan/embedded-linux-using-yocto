@@ -1,0 +1,14 @@
+ALLOW_EMPTY
+-------------
+
+By default, BitBake does not produce empty packages
+
+This default behavior can cause issues when there is an RDEPENDS or some other hard runtime requirement on the existence of the package
+
+ALLOW_EMPTY variable Specifies whether to produce an output package even if it is empty.
+
+Ex:
+
+ALLOW_EMPTY_${PN} = "1"
+ALLOW_EMPTY_${PN}-dev = "1"
+ALLOW_EMPTY_${PN}-staticdev = "1"

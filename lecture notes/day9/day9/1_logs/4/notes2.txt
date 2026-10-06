@@ -1,0 +1,7 @@
+do_compile() {
+ bbplain "*************************************"
+ bbplain "* *"
+ bbplain "* Example recipe created by bitbake-layers *"
+ bbplain "* *"
+ bbplain "*************************************"
+}

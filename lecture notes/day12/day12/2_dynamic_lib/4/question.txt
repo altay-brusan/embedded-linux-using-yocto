@@ -1,0 +1,2 @@
+Why is liblwl.so not present in the image
+-------------------------------------------

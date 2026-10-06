@@ -1,0 +1,9 @@
+Boot Splash screen
+--------------------
+
+IMAGE_FEATURES += "splash"
+
+or
+
+EXTRA_IMAGE_FEATURES += "splash"
+

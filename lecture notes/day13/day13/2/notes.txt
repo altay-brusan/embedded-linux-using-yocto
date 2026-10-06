@@ -1,0 +1,12 @@
+Yocto Variables
+------------------
+
+There are two variables provided by Yocto to allow the specifications of dependencies
+
+DEPENDS
+
+	Specifies build-time dependencies, via a list of bitbake recipes to build prior to build the recipe
+
+RDEPENDS
+
+	Specifies run-time dependencies, via a list of packages to install prior to installing the current package

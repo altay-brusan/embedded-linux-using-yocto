@@ -1,0 +1,9 @@
+noexec
+--------
+
+When set to "1", marks the task as being empty, with no execution required.
+
+Eg: do_configure[noexec] = "1"
+    do_compile[noexec] = "1"
+
+This can be used to disable tasks which are defined elsewhere for example in a class that are not needed in a particular recipe

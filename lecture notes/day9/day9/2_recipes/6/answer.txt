@@ -1,0 +1,8 @@
+What if i have a Makefile which don't have clean target?
+-----------------------------------------------------------
+
+CLEANBROKEN = "1"
+
+If set to "1" within a recipe, CLEANBROKEN specifies that the make clean command does not work for the software being built.
+
+Consequently, the OpenEmbedded build system will not try to run make clean during the do_configure task, which is the default behavior.

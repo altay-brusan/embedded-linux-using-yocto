@@ -1,0 +1,41 @@
+Recipe Explanation
+-----------------------
+The most relevant tasks that will be executed when calling bitbake myhello are the following:
+
+$ bitbake -c cleanall myhello
+
+1. do_fetch: 
+	in this case, since the specified SRC_URI variable points to a local file, BitBake will simply copy the file in the recipe WORKDIR. 
+	This is why the S environment variable (which represents the source code location) is set to WORKDIR.
+
+$ bitbake -c fetch myhello
+$ bitbake -c unpack myhello
+$ bitbake -c configure myhello
+	
+What is sysroot?
+---------------
+contain needed headers and libraries for generating binaries that run on the target architecture
+
+recipe-sysroot-native:
+	includes the build dependencies used in the host system during the build process.
+	It is critical to the cross-compilation process because it encompasses the compiler, linker, build script tools, and more,
+
+recipe-sysroot:
+	the libraries and headers used in the target code
+
+2. do_compile: 
+	when executing this task, BB will invoke the C cross-compiler for compiling the myhello.c source file. 
+	The results of the compilation will be in the folder pointed by the B environment variable (that, in most of the cases, is the same as the S folder).
+
+3. do_install: 
+	this task specifies where the helloworld binary should be installed into the rootfs. 
+	It must be noticed that this installation will only happen within a temporary rootfs folder within the recipe WORKDIR (pointed by the variable D)
+
+	image: This contains the files installed by the recipe (pointed to D variable).
+
+4. do_package: 
+	in this phase the file installed in the directory D will be packaged in a package named myhello. 
+	This package will be used later from BitBake when eventually building a rootfs image containing the helloworld recipe package
+
+	packages: The extracted contents of packages are stored here
+	packages-split: The contents of packages, extracted and split, are stored here. This has a sub-directory for each package

@@ -1,0 +1,13 @@
+How to check the value of variable?
+--------------------------------------
+
+For configuration changes, use the following:
+
+$ bitbake -e
+
+This command displays variable values after the configuration files (i.e. local.conf, bblayers.conf, bitbake.conf and so forth) have been parsed.
+
+For recipe changes, use the following
+
+$ bitbake recipe -e | grep VARIABLE="
+

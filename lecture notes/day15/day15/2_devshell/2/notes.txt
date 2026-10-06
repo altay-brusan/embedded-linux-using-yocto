@@ -1,0 +1,20 @@
+Devshell
+-----------
+
+Devshell provides you with an interactive shell with all the appropriate variables set for cross-compiling
+
+$ echo $CC
+
+$ echo $PATH
+
+$ echo $CXX
+
+$ echo $LDFLAGS
+
+$ echo $CFLAGS
+
+Now you can make modifications and compile and generate an executable
+
+$ ${CC} -DUSE_SYSCALL userprog.c ${LDFLAGS} -o userprog
+
+Try other recipes which we wrote for example mymakefile

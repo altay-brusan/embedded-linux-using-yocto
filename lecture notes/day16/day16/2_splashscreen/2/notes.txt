@@ -1,0 +1,21 @@
+Changing custom splash screen
+-----------------------------
+
+Psplash expects an image to be in header file format, so you need to convert your image into a header file format by using script called "make-image-header.sh"
+
+source - http://git.yoctoproject.org/cgit/cgit.cgi/psplash/tree/make-image-header.sh
+
+Command:
+--------
+
+./make-image-header.sh <path_to_image_file> <NAME>
+
+$ ./make-image-header.sh logo.png POKY
+
+Rename it to psplash-poky-img.h
+
+We can give a  different NAME but it requires modification to source psplash.c
+
+$ mv logo-img.h psplash-poky-img.h
+
+Replace your generated image header in poky/meta-poky/recipes-core/psplash/files

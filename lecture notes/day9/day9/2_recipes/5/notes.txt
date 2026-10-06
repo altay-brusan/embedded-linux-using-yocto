@@ -1,0 +1,5 @@
+EXTRA_OEMAKE
+----------------
+
+If you need additional make options, you should store them in the EXTRA_OEMAKE variable
+

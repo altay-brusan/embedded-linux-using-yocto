@@ -1,0 +1,30 @@
+Creating an image from scratch
+-------------------------------
+
+The simplest way is to inherit the core-image bbclass, as it provides a set of image features that can be used very easily
+
+
+inherit core-image
+Which tells us that the definition of what actually gets installed is defined in the core-image.bbclass.
+
+Image recipes set IMAGE_INSTALL to specify the packages to install into an image through image.bbclass.
+ 
+Create an images directory
+
+$ mkdir -p recipes-examples/images
+
+Create the image recipe
+
+$ vi recipes-examples/images/lwl-image.bb
+
+SUMMARY = "A small boot image for LWL learners"
+LICENSE = "MIT"
+inherit core-image
+# Core files for basic console boot
+IMAGE_INSTALL = "packagegroup-core-boot"
+IMAGE_ROOTFS_SIZE ?= "8192"
+#Add our needed applications
+IMAGE_INSTALL += "usbutils"
+
+
+

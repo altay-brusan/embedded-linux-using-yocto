@@ -1,0 +1,25 @@
+GNU Project Example
+---------------------
+
+GNU Hello is an almost-trivial free software program that prints the phrase "Hello, world!" or a translation thereof to the screen.
+
+It can print the message in different formats, or print a custom message
+
+The primary purpose of the program is to serve as an example of the GNU coding standards
+
+Download the latest version of Hello World program from https://ftp.gnu.org/gnu/hello/
+
+$ tar  -xzvf  hello-*
+
+$ ./configure
+
+$ make
+
+$ make install
+
+$ man hello
+
+$ make uninstall
+
+
+

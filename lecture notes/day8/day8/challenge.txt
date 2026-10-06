@@ -1,0 +1,4 @@
+Challenge
+-------------
+
+Write a recipe for a C code which also uses a header file (Two files: .c/.h)

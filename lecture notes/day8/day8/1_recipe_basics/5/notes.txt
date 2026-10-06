@@ -1,0 +1,16 @@
+Stage 2: Unpacking (do_unpack)
+-------------------------------
+
+All local files found in SRC_URI are copied into the recipe’s working directory, in $BUILDDIR/tmp/work/
+
+When extracting a tarball,BitBake expects to find the extracted files in a directory named <application>-<version>. This is controlled by the S variable.
+
+If the tarball follows the above format, then you need not define S variable
+
+Eg. SRC_URI = "https://busybox.net/downloads/busybox-${PV}.tar.bz2;name=tarball
+
+If the directory has another name, you must explicitly define S
+
+If you are fetching from SCM like git or SVN, or your file is local to your machine, you need to define S
+
+If the scheme is git, S = ${WORKDIR}/git

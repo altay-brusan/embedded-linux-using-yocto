@@ -1,0 +1,33 @@
+PACKAGING Unversioned Libraries
+-----------------------------------
+
+It follows that packaging an unversioned library requires a bit of work in the recipe.
+
+By default, "liblwl.so" gets packaged into ${PN}-dev, which triggers a QA warning that a non-symlink library is in a -dev package
+
+To solve this problem, you need to package the unversioned library into ${PN} where it belongs.
+
+Following are the abridged default FILES variables in bitbake.conf
+
+SOLIBS = ".so.*"
+SOLIBSDEV = ".so"
+FILES_${PN} = "... ${libdir}/lib*${SOLIBS} ..."
+FILES_SOLIBSDEV ?= "... ${libdir}/lib*${SOLIBSDEV} ..."
+FILES_${PN}-dev = "... ${FILES_SOLIBSDEV} ..."
+
+SOLIBS defines a pattern that matches real shared object libraries.
+SOLIBSDEV matches the development form (unversioned symlink).
+
+These two variables are then used in FILES_${PN} and FILES_${PN}-dev
+
+which puts the real libraries into ${PN} and the unversioned symbolic link into PN-dev.
+
+To package unversioned libraries, you need to modify the variables in the recipe as follows:
+
+SOLIBS = ".so"
+FILES_SOLIBSDEV = ""
+
+The modifications cause .so to be the real library and unsets FILES_SOLIBSDEV so that no libraries get packaged into PN-dev.
+
+
+

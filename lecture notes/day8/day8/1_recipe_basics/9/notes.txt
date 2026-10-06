@@ -1,0 +1,22 @@
+Stage 5: Compilation (do_compile)
+---------------------------------
+
+do_compile task happens after source is fetched, unpacked, and configured.
+
+Stage 6: Installation (do_install)
+------------------------------------
+
+After compilation completes, BitBake executes the do_install task
+
+During do_install, the task copies the built files along with their hierarchy to locations that would mirror their locations on the target device.
+
+Stage 7: Packaging (do_package)
+--------------------------------
+
+The do_package task splits the files produced by the recipe into logical components.
+
+Even software that produces a single binary might still have debug symbols, documentation, and other logical components that should be split out.
+
+The do_package task ensures that files are split up and packaged correctly.
+
+

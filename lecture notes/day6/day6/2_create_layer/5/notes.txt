@@ -1,0 +1,23 @@
+Layer Configuration File layer.conf
+-----------------------------------
+
+# The configuration and classes directory is appended to BBPATH
+BBPATH .= ":${LAYERDIR}"
+
+# The recipes for the layers are appended to BBFILES
+BBFILES += "${LAYERDIR}/recipes-*/*/*.bb ${LAYERDIR}/recipes-*/*/*.bbappend"
+
+# The BBFILE_COLLECTIONS variable is then appended with the layer name
+BBFILE_COLLECTIONS += "skeleton"
+BBFILE_PATTERN_skeleton = "^${LAYERDIR}/"
+# The BBFILE_PRIORITY variable then assigns a priority to the layer. 
+BBFILE_PRIORITY_skeleton = "1"
+
+# This should only be incremented on significant changes that will
+# cause compatibility issues with other layers
+LAYERVERSION_skeleton = "1"
+
+LAYERDEPENDS_skeleton = "core"
+
+LAYERSERIES_COMPAT_skeleton = "zeus"
+

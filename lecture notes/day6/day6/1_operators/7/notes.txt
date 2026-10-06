@@ -1,0 +1,17 @@
+Immediate Variable Expansion (:=)
+-----------------------------------
+
+The ":=" operator results in a variable's contents being expanded immediately, rather than when the variable is actually used
+
+A = "11"
+B = "B:${A}"
+A = "22"
+C := "C:${A}"
+D = "${B}"
+
+
+A = "11"
+B := "B:${A}"
+A = "22"
+C := "C:${A}"
+D = "${B}"

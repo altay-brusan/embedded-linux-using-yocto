@@ -1,0 +1,18 @@
+Booting Process in Beaglebone black
+------------------------------------
+
+The AM335x is complex piece of hardware, but has limited internal RAM (128 kB)
+
+Because of this limited amount of RAM, multiple bootloader stages are needed
+
+These bootloader stages systematically unlock the full functionality of the device so that all complexities of the device are available to the kernel
+
+The AM335x has four distinct bootloader stages:
+
+
+The four bootloader stages are:
+
+1) ROM
+2) SPL (or Secondary Program Loader)
+3) U-BOOT
+4) Linux Kernel

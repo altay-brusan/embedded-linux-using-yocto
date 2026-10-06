@@ -1,0 +1,19 @@
+Appending operators
+--------------------
+
++=
+--------
+
+A = "hello"
+A += "world"
+
+.=
+--------
+
+A = "hello"
+A .= "world"
+
+Difference between += and .= is space is automatically added in += 
+
+These operators take immediate effect during parsing
+

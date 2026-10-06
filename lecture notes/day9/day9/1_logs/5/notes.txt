@@ -1,0 +1,10 @@
+Debug Output
+------------
+
+You can see the debug output from Bitbake by using the -D option
+
+The debug output gives more information about what BitBake is doing and the reason behind it
+
+Each -D option you use increases the logging level.
+
+The most common usage is -DDD

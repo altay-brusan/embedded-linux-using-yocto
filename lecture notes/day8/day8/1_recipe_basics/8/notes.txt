@@ -1,0 +1,12 @@
+Stage 4: Configuration (do_configure)
+------------------------------------
+
+Most software provides some means of setting build-time configuration options before compilation
+
+Typically, setting these options is accomplished by running a configure script with options, or by modifying a build configuration file
+
+Autotools: If your source files have a configure.ac file, then your software is built using Autotools. 
+
+CMake: If your source files have a CMakeLists.txt file, then your software is built using CMake
+
+If your source files do not have a configure.ac or CMakeLists.txt file,you normally need to provide a do_configure task in your recipe unless there is nothing to configure.

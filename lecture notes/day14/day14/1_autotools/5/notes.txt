@@ -1,0 +1,17 @@
+Generate a tarball
+------------------
+
+Makefile contains all kinds of interesting targets, including one to build a tarball of the project containing all of the files we need to distribute
+
+./configure
+make dist
+
+Install on the target
+---------------------
+
+$ make install
+
+Uninstall
+-------------
+
+$ make uninstall

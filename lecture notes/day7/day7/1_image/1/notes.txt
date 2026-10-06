@@ -1,0 +1,25 @@
+What is an image
+--------------------
+
+Image is a top level recipe. (It inherits an image.bbclass)
+
+Building an image creates an entire Linux distribution from source
+
+        Compiler, tools, libraries
+        BSP: Bootloader, Kernel
+        Root filesystem:
+                ● Base OS
+                ● services
+                ● Applications
+                ● etc
+
+Creating custom images
+------------------------
+
+You often need to create your own Image recipe in order to add new packages or functionality
+
+Two ways
+------------
+
+a) creating an image from scratch
+b) extend an existing recipe (preferable)

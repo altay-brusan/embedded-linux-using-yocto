@@ -1,0 +1,2 @@
+How to check the value of variable?
+--------------------------------------

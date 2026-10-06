@@ -1,0 +1,16 @@
+OpenEmbedded Variables
+----------------------
+
+S : Contains the unpacked source files for a given recipe
+
+D : The destination directory (root directory of where the files are installed, before creating the image)
+
+WORKDIR: The location where the OpenEmbedded build system builds a recipe (i.e. does the work to create the package).
+
+PN : The name of the recipe used to build the package
+
+PV : The version of the recipe used to build the package
+
+PR : The revision of the recipe used to build the package.
+
+

@@ -1,0 +1,15 @@
+Recipe for cmake package
+-----------------------------
+
+Applications that use cmake require
+
+	a recipe that has a source archive listed in SRC_URI
+
+	also inherit the cmake class
+
+Generally the CMake build system knows how to install the software so a overwrite over do_install is not necessary
+
+EXTRA_OECMAKE
+----------------
+
+Variable can be used to pass any needed configure options that are specific to the recipe.

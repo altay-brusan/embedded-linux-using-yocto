@@ -1,0 +1,23 @@
+Patching the source for a recipe
+---------------------------------
+
+Advantage of Yocto is that everything is build from source
+
+It's fairly easy to make changes to anything that gets built
+
+As part of building a recipe, OE creates a tmp/work/<architecture>/<recipe>/<version> directory, known as the "work directory". 
+
+This is where all of the work done to build a recipe takes place.
+
+A subdirectory contains the source of the recipe named <recipename>-<version> or "git" (depending on how the fetched source is provided)
+
+The temptation is to simply make changes here and then recompile, but there are several reasons why that's not a good idea:
+
+1.You can easily lose your changes if you're not careful e.g. running bitbake -c clean will wipe the directory out
+
+2. You have to force compilation as the build system doesn't know that you've made any changes
+
+bitbake -c compile <recipe> -f
+
+
+

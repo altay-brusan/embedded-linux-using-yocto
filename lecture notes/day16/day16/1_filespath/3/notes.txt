@@ -1,0 +1,16 @@
+FILESEXTRAPATHS
+----------------
+
+Extends the search path the OpenEmbedded build system uses when looking for files and patches as it processes recipes and append files.
+
+FILESEXTRAPATHS_prepend := "${THISDIR}:"
+
+THISDIR		The directory in which the file BitBake is currently parsing is located.
+
+Best practices dictate that you accomplish this by using FILESEXTRAPATHS from within a .bbappend file and that you prepend paths as follows:
+
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+
+
+                    
+

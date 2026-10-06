@@ -1,0 +1,25 @@
+Recipe Dependency Information
+-------------------------------
+
+Dependency information can help you understand why a recipe is built.
+
+To generate dependency information for a recipe, run the following command:
+
+$ bitbake -g recipename
+
+This command writes the following files in the current directory:
+
+pn-buildlist
+==============
+
+	A list of recipes/targets involved in building recipename. 
+
+	 "Involved" here means that at least one task from the recipe needs to run when building recipename from scratch
+
+task-depends.dot
+==================
+
+	A graph showing dependencies between tasks.
+
+The graphs are in DOT format and can be converted to images (e.g. using the dot tool from Graphviz).
+

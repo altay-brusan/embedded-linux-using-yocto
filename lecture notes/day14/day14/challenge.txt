@@ -1,0 +1,4 @@
+Challenge
+------------
+
+Create a hello world static library using autotools (not a yocto recipe)

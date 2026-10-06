@@ -1,0 +1,26 @@
+Variable Expansion
+-------------------
+
+Variables can reference the contents of other variables using a syntax that is similar to variable expansion in Bourne shells
+
+A = "hello"
+B = "${A} world"
+
+$ bitbake -e | grep ^A=
+$ bitbake -e | grep ^B=
+
+The "=" operator does not immediately expand variable references in the right-hand side
+
+Instead, expansion is deferred until the variable assigned to is actually used
+
+A = "${B} hello"
+B = "${C} world"
+C = "linux"
+
+$ bitbake -e | grep ^A=
+
+What happens if C is not defined in above?
+--------------------------------------------
+the string is kept as is
+
+

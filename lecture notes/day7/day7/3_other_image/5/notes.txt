@@ -1,0 +1,15 @@
+IMAGE_MANIFEST
+----------------
+
+The manifest file for the image
+
+This file lists all the installed packages that make up the image.
+
+The file contains package information on a line-per-package basis as follows:
+
+packagename packagearch version
+
+
+The image class defines the manifest file as follows:
+
+	IMAGE_MANIFEST = "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.manifest"

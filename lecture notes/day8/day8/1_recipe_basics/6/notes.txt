@@ -1,0 +1,12 @@
+Stage 3: Patching Code (do_patch)
+---------------------------------
+
+Sometimes it is necessary to patch code after it has been fetched.
+
+Any files mentioned in SRC_URI whose names end in .patch or .diff or compressed versions of these suffixes (e.g. diff.gz) are treated as patches
+
+The do_patch task automatically applies these patches.
+
+The build system should be able to apply patches with the "-p1" option (i.e. one directory level in the path will be stripped off).
+
+If your patch needs to have more directory levels stripped off, specify the number of levels using the "striplevel" option in the SRC_URI entry for the patch

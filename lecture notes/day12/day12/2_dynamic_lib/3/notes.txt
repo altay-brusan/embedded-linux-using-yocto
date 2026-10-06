@@ -1,0 +1,11 @@
+Write a Dynamic Library Recipe
+--------------------------------
+
+Name of the Recipe: mydynamic
+
+File Location:
+----------------
+
+.so 	->	${libdir}
+
+.h	-> 	${includedir}

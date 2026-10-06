@@ -1,0 +1,21 @@
+Understanding file searching paths
+----------------------------------
+
+When a file (a patch or a generic file) is included in SRC_URI, Bitbake searches for FILESPATH and FILESEXTRAPATH variables.
+
+The default value for the FILESPATH variable is defined in the base.bbclass class found in meta/classes
+
+FILESPATH = "${@base_set_filespath(["${FILE_DIRNAME}/${BP}", "${FILE_DIRNAME}/${BPN}", "${FILE_DIRNAME}/files"], d)}"
+
+The value is a colon-separated list of directories that are searched left-to-right in order.
+
+The default setting is to look in the following locations:
+
+	<recipe>-<version>
+	<recipe>
+	<files>
+
+
+$ bitbake -e myhello | grep ^FILESPATH=
+
+Note:  Do not hand-edit the FILESPATH variable

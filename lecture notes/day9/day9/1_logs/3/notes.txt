@@ -1,0 +1,17 @@
+Logging Information during task execution
+-------------------------------------------
+
+The logging utilities provided by BitBake are very useful to trace the code execution path.
+
+BitBake provides logging functions for use in Python and Shell Script code, as described
+
+Python: For use within Python functions, BitBake supports several log levels, which are bb.fatal, bb.error, bb.warn, bb.note, bb.plain, and bb.debug
+
+Shell Script: For use in Shell Script functions, the same set of log levels exists and is accessed with a similar syntax: bbfatal, bberror, bbwarn, bbnote, bbplain, and bbdebug
+
+There is one subtle difference between the use of the logging functions in Python and Shell Scripting.
+
+The logging functions in Python are directly handled by BitBake, seen on the console, and stored in the execution log that can be seen inside build/tmp/log/cooker/<machine>
+
+When the logging functions are used in Shell Script, the information is outputted on the task's respective task log file, which is available in build/tmp/work/<arch>/<recipe name>/<software version>/temp
+

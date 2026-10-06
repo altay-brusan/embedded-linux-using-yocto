@@ -1,0 +1,27 @@
+Autotools
+-----------
+
+GNU autotools family is a collection of utilities designed to assist application and library developers in making their source code portable across a variety of many unix like systems.
+
+It can be used both for 
+	building native programs on the build machine and 
+	also for cross-compiling to other architectures.
+
+
+Autotools is frequently the brains behind the typical
+
+$./configure
+$make
+$make install
+
+It is made up of many tools
+Primary tools:
+
+	automake
+	autoconf
+	make
+
+GNU projects require a minimum set of files to be included with project:
+	README, INSTALL, COPYING, THANKS, NEWS, AUTHORS and ChangeLog
+
+The autotools will generate starting versions of some of these files for you

@@ -1,0 +1,2 @@
+Where should i place the content of conf/local.conf as this file is part of build folder?
+------------------------------------------------------------------------------------------

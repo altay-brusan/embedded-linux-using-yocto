@@ -1,0 +1,23 @@
+Makefiles Problems
+-------------------
+
+Make allows people to generate executables easily based on source code.
+
+Advantage: 
+
+	allows for faster builds
+	keeps track of source files that haven’t changed since last time a build was run
+	skips unnecessary steps
+
+Disadvantage:
+
+	Difficult to make a software program portable
+	If you need to build the same program on a different platform, Makefile needs to be tweaked to work on that platform
+	the C compiler differs from system to system
+	certain library functions are missing on some systems; 
+	header files may have different names
+
+One way to handle this is to write conditional code, with code blocks selected by means of preprocessor directives (#ifdef)
+	but because of the wide variety of build environments this approach quickly becomes unmanageable
+	Autotools is designed to address this problem more manageably.
+

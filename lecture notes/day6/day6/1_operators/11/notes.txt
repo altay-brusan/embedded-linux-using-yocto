@@ -1,0 +1,12 @@
+Removal
+------------
+
+You can remove values from lists using the removal override style syntax
+
+Specifying a value for removal causes all occurrences of that value to be removed from the variable.
+
+FOO = "123 456 789 123456 123 456 123 456"
+FOO_remove = "123"
+
+$ bitbake -e | grep ^FOO=
+

@@ -1,0 +1,22 @@
+Read-Only Root Filesystem
+-----------------------------
+
+Why do we need read-only rootfs
+---------------------------------
+
+	Reduce wear on flash memory
+
+	Eliminate system file corruption
+
+How to do it?
+---------------
+
+To create the read-only root filesystem, simply add the "read-only-rootfs" feature to your image.
+
+IMAGE_FEATURES = "read-only-rootfs" in your recipe
+
+	or
+
+EXTRA_IMAGE_FEATURES += "read-only-rootfs" in local.conf
+
+

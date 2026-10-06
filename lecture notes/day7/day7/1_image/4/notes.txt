@@ -1,0 +1,15 @@
+Reusing an existing image
+--------------------------
+
+When an image mostly fits our needs and we need to do minor adjustments on it,it is very convenient to reuse its code
+
+This makes code maintenance easier and highlights the functional differences
+
+For example, if we want to include an application (lsusb)
+
+Create another recipe:
+
+$ vim recipes-examples/images/lwl-image-reuse.bb
+
+require recipes-core/images/core-image-minimal.bb
+IMAGE_INSTALL_append = " usbutils"

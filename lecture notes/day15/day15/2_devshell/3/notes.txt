@@ -1,0 +1,17 @@
+Devshell
+----------
+
+To manually run a specific task using devshell, run the corresponding run.* script in the ${WORKDIR}/temp directory (e.g., run.do_configure.pid)
+
+If a task's script does not exist, you can create the task by first running it outside of the devshell:
+
+$ bitbake -c task
+
+Execution of a task's run.* script and BitBake's execution of a task are identical.
+
+In other words, running the script re-runs the task just as it would be run using the bitbake -c command.
+
+Any run.* file that does not have a .pid extension is a symbolic link (symlink) to the most recent version of that file.
+
+
+

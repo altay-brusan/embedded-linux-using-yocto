@@ -1,0 +1,16 @@
+Creating Layer
+-----------------
+
+There are two ways to create your own layer.
+1. Manually
+2. Using script
+
+Manually:
+----------
+
+Step 1 : Create a directory for the layer. For example: 'meta-mylayer'
+
+Step 2 : Create a conf/layer.conf
+		You can simply copy meta-oe's one and just change "openembedded-layer" to something appropriate for your layer; you may also want to set the priority as appropriate.
+
+Step 3 : Update bblayers.conf file with the new layer

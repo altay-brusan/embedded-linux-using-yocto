@@ -1,0 +1,15 @@
+autotools vs autotools-brokensep
+----------------------------------
+
+If the software being built by a recipe does not support using out-of-tree builds, you should have the recipe inherit the autotools-brokensep class. 
+
+out-of-tree build
+-----------------
+
+The autotools class has been changed to use a directory for building (B), which is separate from the source directory (S).
+
+This is commonly referred to as B != S, or an out-of-tree build.
+
+If the software being built is already capable of building in a directory separate from the source, you do not need to do anything.
+
+However, if the software is not capable of being built in this manner, you need to inherit autotools-brokensep instead of autotools class

@@ -1,0 +1,6 @@
+Try
+----
+
+Convert the myhello recipe to use 'static' and 'dynamic' library
+
+Check recipes-sysroot after you do 'bitbake -c configure myhello'

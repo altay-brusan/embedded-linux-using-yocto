@@ -1,0 +1,16 @@
+Prioritizing Your Layer
+------------------------
+
+Each layer is assigned a priority value. 
+
+Priority values control which layer takes precedence if there are recipe files with the same name in multiple layers. 
+
+For these cases, the recipe file from the layer with a higher priority number takes precedence.
+
+Priority values also affect the order in which multiple .bbappend files for the same recipe are applied. 
+
+To specify the layer's priority manually, use the BBFILE_PRIORITY variable and append the layer's root name:
+
+     BBFILE_PRIORITY_mylayer = "1"
+
+Note: the layer priority does not currently affect the precedence order of .conf or .bbclass files.

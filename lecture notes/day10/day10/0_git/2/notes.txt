@@ -1,0 +1,12 @@
+Specifying a different branch
+------------------------------
+
+You can specify the branch using the following form:
+
+SRC_URI = "git://server.name/repository;branch=branchname"
+
+If you do not specify a branch, BitBake looks in the default "master" branch.
+
+BitBake will now validate the SRCREV value against the branch.
+
+

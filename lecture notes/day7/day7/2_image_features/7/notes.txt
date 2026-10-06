@@ -1,0 +1,7 @@
+Some other Features
+--------------------
+
+tools-debug: Installs debugging tools such as strace and gdb.
+
+tools-sdk: Installs a full SDK that runs on the device.
+

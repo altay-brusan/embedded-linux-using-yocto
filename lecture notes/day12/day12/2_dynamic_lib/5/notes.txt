@@ -1,0 +1,12 @@
+Packaging Unversioned Libraries
+--------------------------------
+
+When shared libraries are built, they should be versioned but sometimes this is not done
+
+Some library vendors do not release source code for their software but do release pre-built binaries.
+
+You will get error when you add unversioned libraries.
+
+Because versioned libraries are far more common than unversioned libraries, the default packaging rules assume versioned libraries
+
+

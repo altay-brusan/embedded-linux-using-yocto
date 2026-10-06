@@ -1,0 +1,22 @@
+Add the following to CMakeLists.txt
+---------------------------------------
+
+CMake Version
+---------------
+
+cmake_minimum_required(VERSION 2.8.3)
+
+Sets a minimum required version for CMake
+
+It is used to avoid any cryptic error messages due to the CMakeLists.txt assuming a later version of CMake than the one installed on the current host.
+
+Project Name
+-----------
+
+project(cmake_recipe)
+
+Declares the name of the project
+
+What is a project
+------------------
+A project logically groups a number of targets (that is, libraries, executables and custom build steps) into a self-contained collection that can be built on its own.

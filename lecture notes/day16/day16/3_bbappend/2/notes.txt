@@ -1,0 +1,22 @@
+Benefits of bbappend
+---------------------
+
+If you were copying recipes, you would have to manually merge changes as they occur.
+
+Being able to append information to an existing recipe not only avoids duplication, but also automatically applies recipe changes from a different layer into your layer.
+
+Points to Consider while working with .bbappend
+-----------------------------------------------
+
+1. Appended files must have the same root name as the recipe they extend
+
+	Eg. example_0.1.bbappend applies to example_0.1.bb
+
+This means the original recipe and append file names are version number-specific.
+
+If the corresponding recipe is renamed to update to a newer version, you must also rename and possibly update the corresponding .bbappend as well.
+
+During the build process, BitBake displays an error on starting if it detects a .bbappend file that does not have a corresponding recipe with a matching name
+
+2. If adding new files, you must prepend the FILESEXTRAPATHS variable with the path to files’ directory
+

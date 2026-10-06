@@ -1,0 +1,15 @@
+Customizing Images Using Custom IMAGE_FEATURES and EXTRA_IMAGE_FEATURES
+-----------------------------------------------------------------------
+
+Another method for customizing your image is to enable or disable high-level image features by using the IMAGE_FEATURES and EXTRA_IMAGE_FEATURES variables
+
+IMAGE_FEATURES/EXTRA_IMAGE_FEATURES is made to enable special features for your image, such as empty password for root, debug image, special packages, x11, splash, ssh-server
+
+What's the difference between IMAGE_FEATURES and EXTRA_IMAGE_FEATURES
+-----------------------------------------------------------------------
+
+Best practice is to 
+
+	Use IMAGE_FEATURES from a recipe
+
+	Use EXTRA_IMAGE_FEATURES from local.conf

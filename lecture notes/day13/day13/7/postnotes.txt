@@ -1,0 +1,7 @@
+lspci is provided by pciutils recipe
+
+Check what happens when you write
+
+RDEPENDS = "pciutils"
+
+Remove the ALLOW_EMPTY in mystatic recipe and resolve the error

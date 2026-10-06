@@ -1,0 +1,9 @@
+IMAGE_NAME
+----------------
+
+The name of the output image files minus the extension
+
+This variable is derived using the IMAGE_BASENAME, MACHINE, and DATETIME variables
+
+IMAGE_NAME = "${IMAGE_BASENAME}-${MACHINE}-${DATETIME}"
+

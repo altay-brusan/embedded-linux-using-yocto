@@ -1,0 +1,10 @@
+How it works?
+---------------
+
+To understand how these features work, the best reference is meta/classes/core-image.bbclass
+
+This class lists out the available IMAGE_FEATURES of which most map to package groups while some, such as debug-tweaks and read-only-rootfs, resolve as general configuration settings
+
+In summary, the file looks at the contents of the IMAGE_FEATURES variable and then maps or configures the feature accordingly
+
+Based on this information, the build system automatically adds the appropriate packages or configurations to the IMAGE_INSTALL variable.

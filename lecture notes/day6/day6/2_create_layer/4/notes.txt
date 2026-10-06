@@ -1,0 +1,18 @@
+Creating layer using tool
+---------------------------
+
+You can create your own layer using the bitbake-layers create-layer command
+
+$ bitbake-layers create-layer --help
+
+The tool automates layer creation by setting up a subdirectory with a layer.conf configuration file, a recipes-example subdirectory that contains an example.bb recipe, a licensing file, and a README
+
+$ bitbake-layers create-layer ../source/meta-mylayer
+
+Default priority of the layer is 6
+
+$ bitbake-layers add-layer ../source/meta-mylayer
+
+$ bitbake-layers show-layers
+
+

@@ -1,0 +1,28 @@
+PACKAGES
+-----------
+
+PACKAGES        -       The list of packages the recipe creates
+
+The default value:	${PN}-dbg ${PN}-staticdev ${PN}-dev ${PN}-doc ${PN}-locale ${PACKAGE_BEFORE_PN} ${PN}
+
+FILES		-	The list of files and directories that are placed in a package
+
+To use the FILES variable, provide a package name override that identifies the resulting package
+
+Eg. FILES_${PN} specifies the files to go into the main package
+
+Then, provide a space-separated list of files or paths that identify the files you want included as part of the resulting package
+
+Eg. FILES_${PN} += "${bindir}/mydir1 ${bindir}/mydir2/myfile"
+
+Good Practice : use ${sysconfdir} rather than /etc or ${bindir} rather than /usr/bin
+
+List of the variables can be found in meta/conf/bitbake.conf
+
+What are the default values of various FILES_* variables?
+---------------------------------------------------------
+
+Consequently, you might find you do not even need to set these variables in your recipe unless the software the recipe is building installs files into non-standard locations.
+
+The PACKAGES and FILES_* variables in the meta/conf/bitbake.conf configuration file define how files installed by the do_install task are packaged
+

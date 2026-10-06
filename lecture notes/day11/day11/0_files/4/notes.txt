@@ -1,0 +1,13 @@
+Important Point
+------------------
+
+For each installed file, the first package whose FILES value matches the file is the package into which the file goes.
+
+If a file matches the FILES variable for more than one package in PACKAGES, it will be assigned to the earliest (leftmost) package.
+
+
+FILES_${PN}-dbg += "${bindir}/userprog"
+FILES_${PN} += "${bindir}/userprog"
+
+
+

@@ -1,0 +1,18 @@
+Package group
+--------------
+
+A package group is a set of packages that can be included on any image.
+
+A package group can contain a set of packages.
+
+Using the packagegroup name in IMAGE_INSTALL variable install all the packages defined by the package group into the root file system of your target image.
+
+There are many package groups. There are present in subdirectories named "packagegroups"
+
+$ find . -name 'packagegroups'
+
+They are recipe files(.bb) and starts with packagegroup- 
+
+For example, 
+
+packagegroup-core-boot: Provides the minimum set of packages necessary to create a bootable image with console.

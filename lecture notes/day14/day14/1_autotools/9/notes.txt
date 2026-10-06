@@ -1,0 +1,22 @@
+autotools bbclass
+----------------------
+
+It's useful to have some idea of how the tasks defined by the autotools* classes work 
+
+do_configure:
+
+	Regenerates the configure script (using autoreconf)
+
+	You can pass additional parameters to configure through the EXTRA_OECONF variable
+
+do_compile:
+
+	Runs make with arguments that specify the compiler and linker
+
+	You can pass additional arguments through the EXTRA_OEMAKE variable
+
+do_install:
+
+	Runs make install and passes in ${D} as DESTDIR
+
+

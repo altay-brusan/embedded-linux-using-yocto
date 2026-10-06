@@ -1,0 +1,60 @@
+Shared Library Names
+=======================
+
+Dynamic libraries follow certain naming conventions on running systems so that multiple versions can co-exist
+
+Linux shared library can have three names. Which are:
+
+	Linker name (eg: libexample.so)
+	Soname (eg : libexample.so.1.2)
+	Real Name (eg : libexample.so.1.2.3)
+
+Linker Name
+==============
+
+Linker Name is the name that is requested by the linker when another code is linked with your library (with –lexample linker option). 
+
+Linker name typically starts with
+	the prefix lib
+	name of the library
+	the phrase .so
+
+soname
+=============
+
+Every shared library has a special name called the ``soname''.
+
+The soname has 
+	the prefix ``lib'', 
+	the name of the library, 
+	the phrase ``.so'', 
+	followed by a period 
+	and a version number that is incremented whenever the interface changes 
+
+Eg. liblwl.so.1
+
+Real Name
+=============
+
+Real Name is the actual name of the shared library file. 
+
+Real Name = soname + minor version number
+
+Eg. liblwl.so.1.0
+
+It can also be liblwl.so.1.0.1.3
+
+During shared library installation
+=====================================
+
+soname is a symbolic link to the real name
+
+linker name is a symbolic link to the soname
+
+In this way both soname and linker names ultimately point to the real name of the library (i.e. actual library file).
+
+Command to read the soname
+============================
+$ readelf -d liblwl.so
+
+

@@ -1,0 +1,30 @@
+oe_runmake
+-----------------
+
+The default behavior of do_compile task is to run the oe_runmake function if a makefile(Makefile, makefile or GNUMakefile) is found. If no such file is found, the do_compile tasks does nothing
+
+The default behavior of do_configure task is to run oe_runmake clean if a makefile (Makefile, makefile, or GNUmakefile) is found
+
+oe_runmake vs make
+---------------------
+
+oe_runmake function is used to run make.
+
+oe_runmake
+	passes EXTRA_OEMAKE settings to make
+
+	displays the make command
+
+	checks for errors generated via the call.
+
+In OE environment you should not call make directly rather use oe_runmake when you need to run make.
+
+oe_runmake is one of many helper functions defined by the base class
+
+Try: check the definition of oe_runmake in base.bbclass
+	
+
+
+
+
+

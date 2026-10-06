@@ -1,0 +1,18 @@
+RDEPENDS
+-------------
+
+Within a recipe, run time dependencies can be specified using RDEPENDS variable
+
+If your recipe says that T RDEPENDS on P, that tells bitbake that it must deploy P to the target system if it deploys T, because T can't be used without P
+
+Difference between DEPENDS and RDEPENDS
+-----------------------------------------
+
+DEPENDS List of the recipe build-time dependencies
+
+RDEPENDS List of the package runtime dependencies. Must be package specific (e.g. with _${PN})
+
+RDEPENDS_${PN} = "package_name"
+
+If T RDEPENDS on P then T's do_build task is made to depend on P's do_package_write task
+

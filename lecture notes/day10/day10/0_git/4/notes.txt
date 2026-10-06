@@ -1,0 +1,12 @@
+What about private repositories? 
+--------------------------------
+
+Private repositories have the added complexity of requiring authentication before you can download (a.k.a clone) them. 
+
+Luckily, Yocto supports the ssh protocol.
+
+To make Yocto use a GitHub repository:
+
+SRC_URI="git://git@github.com/group_name/repo_name.git;protocol=ssh"
+
+To use SSH, you must generate an SSH keypair on your computer and add the public key to your GitHub account

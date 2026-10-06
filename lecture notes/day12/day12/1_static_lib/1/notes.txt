@@ -1,0 +1,17 @@
+Create Static Library
+=====================
+A static library is basically a set of object files that were copied into a single file with the suffix .a.
+
+The basic tool used to create static libraries is a program called ar (archiver).
+
+This program can be used to
+        create static libraries (also known as archive files),
+        modify object files in the static library,
+        list the names of object files in the library, etc.
+
+In order to create a static library, we have to perform two steps:
+
+        1.Create the object files from the source files of the project
+
+        2. Create the static library (the archive file) from the object files
+

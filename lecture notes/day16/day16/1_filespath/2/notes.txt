@@ -1,0 +1,29 @@
+FILESOVERRIDES
+---------------
+
+Custom paths and files can be added using FILESEXTRAPATHS and FILESOVERRIDES.
+
+The FILESPATH variable is automatically extended using the overrides from the FILESOVERRIDES variable.
+
+FILESOVERRIDES = "${MACHINEOVERRIDES}:${DISTROOVERRIDES}"
+
+$ bitbake -e myhello | grep ^FILESOVERRIDES=
+
+
+You can take advantage of this searching behavior in useful ways. 
+
+Try: Change the MACHINE  in local.conf and check FILESOVERRIDES value
+
+For example, you want to have different defconfigs for different Machines
+
+     files/defconfig
+     files/MACHINEA/defconfig
+     files/MACHINEB/defconfig
+
+SRC_URI = "file://defconfig"
+
+When MACHINE = MACHINEA build system uses files from files/MACHINEA.
+When MACHINE = MACHINEB build system uses files from files/MACHINEB.
+For other machines, it will uses files/defconfig
+
+

@@ -1,0 +1,23 @@
+DEPENDS
+-----------
+
+Within a recipe, you can specify build time dependencies using DEPENDS variable
+
+It is important that you specify all build-time dependencies explicitly.
+
+When a recipe 'A' is DEPENDS on recipe 'B'. In this case, Bitbake first builds recipe 'B' and then recipe 'A'
+
+Example: Adding recipe1 to recipe2 as build dependency
+
+DEPENDS = "recipe1"
+
+The line above means that before the do_configure task of recipe2 can be run, the task do_populate_sysroot from recipe1 will have completed
+
+do_populate_sysroot
+--------------------
+
+Copies a subset of files installed by the do_install task into the appropriate sysroot
+
+Check the log of do_populate_sysroot in recipe2
+
+sysroot-destdir/: Contains a subset of files installed within do_install that have been put into the shared sysroot.

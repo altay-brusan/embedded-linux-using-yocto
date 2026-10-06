@@ -1,0 +1,44 @@
+Hello World autotools
+---------------------
+Next, we need to tell autoconf about the dependencies our configure script needs to look for
+In this case, the configure script only needs to look for a C compiler.
+
+configure.ac
+----------------
+AC_PROG_CC
+AC_CONFIG_FILES([
+ Makefile
+])
+
+
+The AC_PROG_CC line causes the configure script to search for a C compiler and define the variable CC with its name
+
+If there were other dependencies, then we’d use other m4 macros here to discover them;
+
+Makefile.am file
+-------------------
+
+Makefile.am contain Automake instructions
+
+Our configure script will expect a Makefile.in file that it can substitute all of those system-specific variables into
+
+Makefile.in template is very long and complex. 
+
+So instead of writing it by hand, we write a shorter Makefile.am file, which automake will use to generated the Makefile.in for us
+
+bin_PROGRAMS = myhello
+myhello_SOURCES = userprog.c
+
+
+bin_PROGRAMS = myhello
+----------------------
+
+The PROGRAMS suffix is called a primary
+The bin prefix tells automake that the file listed here should be installed to the directory defined by the variable bindir.
+
+myhello_SOURCES = userprog.c
+-----------------------------
+Since we’ve defined a PROGRAM, we need to tell automake where to find its source files
+In this case, the prefix is the name of the program these source files build
+
+

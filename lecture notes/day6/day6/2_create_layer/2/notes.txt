@@ -1,0 +1,26 @@
+Depending on the type of layer, add the content:
+
+	If the layer is adding support for a machine, add the machine configuration in conf/machine/
+
+	If the layer is adding distro policy, add the distro configuration in conf/distro/
+
+	If the layer introduces new recipes, put the recipes you need in recipes-* subdirectories of the layer directory.
+
+Recipe directories inside layers
+-------------------------------
+
+By convention, recipes are splitted into categories
+
+The most difficult part is deciding in which category your recipe will go
+
+By checking what was already done in the official layers should give you a good idea of what you should do
+
+Layer Priority:
+---------------
+
+	Each layer has a priority, which is used by bitbake to decide which layer takes precedence if there are recipe files with the same name in multiple layers
+
+	A higher numeric value represents a higher priority.
+
+
+

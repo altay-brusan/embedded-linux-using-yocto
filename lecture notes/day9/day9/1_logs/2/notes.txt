@@ -1,0 +1,20 @@
+Where do I find build logs?
+-----------------------------
+
+For each individual recipe, there is a "temp" directory under the work directory
+
+Within the build system this directory is pointed to by the T variable, so if you need to you can find it by using bitbake -e
+
+$ bitbake -e <recipename> | grep ^T=
+
+Each task that runs for a recipe produces "log" and "run" files in ${WORKDIR}/temp
+
+You can find log files for each task in the recipe's temp directory
+
+Log files are named log.taskname (e.g. log.do_configure, log.do_fetch, and log.do_compile)
+
+For convenience, symbolic links are kept updated by BitBake, pointing to the last log files using the pattern log.<task>
+
+We can run the scripts for every task with the pattern run.<task>.<pid> 
+
+These files contain the commands which produce the build results

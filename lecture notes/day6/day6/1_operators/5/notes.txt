@@ -1,0 +1,24 @@
+Setting a weaker default value (??=)
+-------------------------------------
+
+Weaker default value is achieved using the ??=  operator
+
+Difference between ?= and ??=
+-------------------------------
+
+Assignment is made at the end of the parsing process rather than immediately.
+
+When multiple "??=" assignments exist, the last one is used
+
+Eg.
+--------
+
+MACHINE ??= "qemux86"
+MACHINE ??= "qemuarm"
+
+If MACHINE is not set, the value of MACHINE = "qemuarm"
+If MACHINE is set, before the statements, then the value will not be changed
+
+It is called weak assignment, as assignment does not occur until the end of the parsing process.
+
+Note: "=" or "?=" assignment will override the value set with "??="

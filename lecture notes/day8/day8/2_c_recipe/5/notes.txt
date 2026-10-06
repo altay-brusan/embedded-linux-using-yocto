@@ -1,0 +1,10 @@
+Who defines the fetch, configure and other tasks 
+-------------------------------------------------
+
+When bitbake is run to build a recipe, base.bbclass file gets inherited automatically by any recipe
+
+You can find it in classes/base.bbclass
+
+This class contains definitions for standard basic tasks such as fetching, unpacking, configuring (empty by default), compiling (runs any Makefile present), installing (empty by default) and packaging (empty by default)
+
+These classes are often overridden or extended by other classes such as the autotools class or the package class.

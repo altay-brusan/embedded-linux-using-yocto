@@ -1,0 +1,14 @@
+Logging
+-----------
+
+bb.fatal and bbfatal: These have the highest priority of logging messages as they print the message and terminate the processing. They cause the build to be interrupted.
+
+bb.error and bberror: They are used to display an error but do not force the build to stop.
+
+bb.warn and bbwarn: They are used to warn users about something.
+
+bb.note and bbnote: These add a note to the user. They are only informative.
+
+bb.plain and bbplain: These output a message.
+
+bb.debug and bbdebug: These add debugging information that is shown depending on the debug level used.

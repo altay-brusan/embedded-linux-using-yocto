@@ -1,0 +1,13 @@
+Installation
+---------------
+
+If you want to be able to do a "make install" of your code, you need to specify where targets should end up
+
+This is done using the CMake install() function:
+
+The syntax for executable is
+
+install (TARGETS Executablename DESTINATION bin)
+
+install (TARGETS userprog DESTINATION bin)
+

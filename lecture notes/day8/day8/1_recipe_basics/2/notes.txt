@@ -1,0 +1,18 @@
+Recipe File Format
+---------------------
+
+File Format: <base_name>_<version>.bb
+
+For example the file  dropbear_2019.78.bb in poky/meta/recipes-core/dropbear has
+base name    : dropbear
+version      : 2019.78
+
+Another Example:
+
+file tiff_4.0.10.bb in poky/meta/recipes-multimedia/libtiff/ has
+base name    : tiff
+version      : 4.0.10
+
+The recipe is for a C library to read and write tiff image files
+
+Note: Use lower-cased characters and do not include the reserved suffixes -native, -cross, -initial, or -dev 

@@ -1,0 +1,28 @@
+Devshell
+----------
+
+It is important to bear in mind that all changes made inside devshell are not persistent between builds; thus, we must be careful to record any change that is important, prior to leaving it
+
+As we have the source at our disposal, we can use it to generate extra patches.
+
+One very practical way of doing that is using Git and git format-patch to create the patch to be included in the recipe afterwards.
+
+If the recipe doesn't use git, we need to create repository
+
+$ git init
+
+$ git add userprog.c 
+
+$ git commit -m "First commit"
+
+Make Modifications
+
+$ git status
+
+$ git add userprog.c
+
+$ git commit -m "Second Commit"
+
+$ git format-patch -1 -o ~/Yocto_Training/source/meta-mylayer/recipes-examples/myhello/files/
+
+Update SRC_URI now

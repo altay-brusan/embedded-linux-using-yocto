@@ -1,0 +1,13 @@
+Files/directories were installed but not shipped in any package [installed-vs-shipped]
+--------------------------------------------------------------------------------------
+
+Files have been installed within the do_install task but have not been included in any package by way of the FILES variable.
+
+Files that do not appear in any package cannot be present in an image later on in the build process
+
+You need to do one of the following:
+
+        Add the files to FILES for the package you want them to appear in (e.g. FILES_${PN} for the main package).
+
+        Delete the files at the end of the do_install task if the files are not needed in any package.
+

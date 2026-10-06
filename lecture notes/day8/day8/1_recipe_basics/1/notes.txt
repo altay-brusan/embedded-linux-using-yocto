@@ -1,0 +1,23 @@
+Recipes
+------------
+
+Recipes are fundamental components in the Yocto Project environment.
+
+A Yocto/OpenEmbedded recipe is a text file with file extension .bb
+
+Each software component built by the OpenEmbedded build system requires a recipe to define the component
+
+A recipe contains information about single piece of software.
+
+What information is present in a recipe?
+----------------------------------------
+
+Information such as:
+
+        Location from which to download the unaltered source
+        any patches to be applied to that source (if needed)
+        special configuration options to apply
+        how to compile the source files and
+        how to package the compiled output
+
+Poky includes several classes that abstract the process for the most common development tools as projects based on Autotools, CMake, and QMake.

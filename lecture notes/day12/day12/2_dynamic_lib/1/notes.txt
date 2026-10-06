@@ -1,0 +1,23 @@
+How to create the dynamic library
+===================================
+
+Step1: Create object files using the below command
+
+        $ gcc -fPIC -c *.c
+
+the -fPIC flag stands for Position Independent Code, a characteristic required by shared libraries
+
+Step2: Create the library
+
+        $ gcc -shared -Wl,-soname,liblwl.so.1 -o liblwl.so.1.0 *.o
+
+The -shared key tells the compiler to produce a shared object which can then be linked with other objects to form an executable.
+
+-Wl flag passes an options to linker with following format -Wl,options
+        in case of our example it sets the name of library, as it will be passed to the linker.
+
+
+Use the dynamic library
+=============================
+$ cd app
+$ gcc main.c -o main -I.. -larith -L..

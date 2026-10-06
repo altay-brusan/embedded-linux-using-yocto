@@ -1,0 +1,15 @@
+Appending and Prepending (Override Style Syntax)
+-------------------------------------------------
+
+You can also append and prepend a variable's value using an override style syntax.
+
+When you use this syntax, no spaces are inserted.
+
+A = "hello"
+A_append = " world"
+
+B = "test"
+B_append = "world"
+
+C = "full"
+C_prepend = "house"

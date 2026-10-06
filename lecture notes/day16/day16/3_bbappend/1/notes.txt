@@ -1,0 +1,28 @@
+Extending a Recipe
+------------------------------
+
+It is a good practice not to modify recipes available in Poky
+
+But it is sometimes useful to modify an existing recipe
+
+Copy Approach:
+--------------
+Copy recipe in your layer and make modifications in the recipe
+
+Extend Approach:
+-----------------
+The BitBake build engine allows to modify a recipe by extending it
+
+What is Bitbake Append?
+--------------------------
+
+A recipe that appends Metadata to another recipe is called a BitBake append file.
+
+File Extension: .bbappend
+
+You can use a .bbappend file in your layer to make additions or changes to the content of another layer's recipe without having to copy the other layer's recipe into your layer
+
+.bbappend file	resides in your layer
+
+.bb recipe file to which you are appending Metadata resides in a different layer.
+

@@ -1,0 +1,36 @@
+Bitbake
+------------
+
+Yocto/OpenEmbedded's build tool bitbake parses a recipe and generates list of tasks that it can execute to perform the build steps
+
+$ bitbake basename
+
+The most important tasks are
+
+do_fetch             Fetches the source code
+do_unpack            Unpacks the source code into a working directory
+do_patch             Locates patch files and applies them to the source code
+do_configure         Configures the source by enabling and disabling any build-time and
+                         configuration options for the software being built
+do_compile           Compiles the source in the compilation directory
+do_install           Copies files from the compilation directory to a holding area
+do_package           Analyzes the content of the holding area and splits it into subsets
+                         based on available packages and files
+do_package_write_rpm Creates the actual RPM packages and places them in the Package Feed area
+
+Generally, the only tasks that the user needs to specify in a recipe are 
+	do_configure,
+	do_compile and 
+	do_install ones. 
+
+The remaining tasks are automatically defined by the YP build system
+
+The above task list is in the correct dependency order. They are executed from top to bottom.
+
+You can use the -c argument to execute the specific task of a recipe.
+
+$ bitbake -c compile dropbear
+
+To list all tasks of a particular recipe
+
+$ bitbake <recipe name> -c listtasks

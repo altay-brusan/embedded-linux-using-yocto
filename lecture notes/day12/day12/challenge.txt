@@ -1,0 +1,4 @@
+Challenge
+------------
+
+Write a recipe which has a c program calling functionality provided by shared library

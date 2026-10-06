@@ -1,0 +1,31 @@
+What is a layer?
+----------------
+
+A layer is a logical collection of related recipes.
+
+Types of Layers: oe-core, BSP Layer, application layer
+
+Layer name starts with meta-, but this is not a technical restriction.
+
+Eg. meta-mycustom
+
+Why create a meta layer?
+---------------------------
+
+Despite most of the customization can be done with the local.conf configuration file, it is not possible to:
+
+	Store recipes for your own software projects
+
+	Create your own images
+
+	Consolidate patches/modifications to other people’s recipes
+
+	Add a new custom kernel
+
+	Add a new machine
+
+
+Most important point: Do not edit POKY/UPSTREAM Layers, as it complicates future updates
+Advantage: This allows you to easily port from one version of Poky to another
+
+

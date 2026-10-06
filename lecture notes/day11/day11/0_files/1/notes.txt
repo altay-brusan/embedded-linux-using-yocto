@@ -1,0 +1,25 @@
+Splitting Files
+----------------
+
+The do_package task splits the files produced by the recipe during do_install into logical components.
+
+Even software that produces a single binary might still have
+	debug symbols
+	documentation and
+	other logical components that should be split out
+
+This separation exists because not all of those installed files are useful in every image
+
+For example, you probably do not need any of the documentation installed in a production image
+
+The do_package task ensures that files are split up and packaged correctly.
+
+The PACKAGES and FILES variables controls splitting
+
+PACKAGES	lists all of the packages to be produced
+
+FILES		specifies which files to include in each package by using an override to specify the package
+
+
+
+

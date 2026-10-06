@@ -1,0 +1,64 @@
+Hello World of Autotools
+------------------------
+
+Step1 : Create a file called configure.ac
+
+This file is read by both autoconf (to create configure) and automake (to create the various Makefile.in)
+
+It contains a series of M4 macros that will be expanded as shell code to finally form the configure script
+
+The macros prefixed with AC_ are Autoconf macros,
+
+The macros that start with AM_ are Automake macros
+
+Basic configure.ac file
+-------------------------
+AC_INIT([myhello], [1.0], [linuxweekendlearning@gmail.com])
+AM_INIT_AUTOMAKE
+AC_OUTPUT
+
+AC_INIT:
+Every configure script must call AC_INIT before doing anything else that produces output.
+
+Prototype: AC_INIT (package, version, [bug-report], [tarname], [url])
+
+AC_INIT takes in as parameters
+	name of the package
+	its version number and
+	a contact address for bug-reports about the package
+
+You can check this address by running ./configure --help
+
+AM_INIT_AUTOMAKE
+	Initializes automake for this project
+
+AC_OUTPUT: 
+	Every configure.ac, should finish by calling AC_OUTPUT.
+
+Command:
+------------
+
+Now we’ve written our config files, we can run autotools and generate the finished configure script and Makefile.in template.
+
+First, we need to generate an m4 environment for autotools to use:
+
+$aclocal
+
+Now we can run autoconf to turn our configure.ac into a configure script, and automake to turn our Makefile.am into a Makefile.in:
+
+$ autoconf
+$ automake --add-missing
+
+or
+
+$ autoreconf --install
+
+autoconf generates the configure script from various input files, some of which are created using other tools like aclocal, automake, etc
+
+autoreconf is a helper that knows how to call all these tools in the right order
+
+aclocal # Set up an m4 environment
+autoconf # Generate configure from configure.ac
+automake --add-missing # Generate Makefile.in from Makefile.am
+./configure # Generate Makefile from Makefile.in
+

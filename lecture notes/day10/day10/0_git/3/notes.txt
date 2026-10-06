@@ -1,0 +1,13 @@
+Fetch from a local git source
+----------------------------
+
+git fetcher supports protocol parameter
+
+protocol
+---------------
+
+The protocol used to fetch the files.
+
+The default is "git" when a hostname is set. If a hostname is not set, the Git protocol is "file"
+
+SRC_URI = "git:///home/user/git/myTest/;protocol=file"

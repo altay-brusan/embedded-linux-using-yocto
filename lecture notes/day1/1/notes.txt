@@ -1,0 +1,8 @@
+What is Yocto?
+----------------
+
+Yocto is the smallest SI metric system prefix
+
+Like 'm' stands for milli ( 10^-3 ).
+
+So is yocto ( y = 10^-24 )
